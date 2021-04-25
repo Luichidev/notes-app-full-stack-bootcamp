@@ -14,7 +14,7 @@ export default function NoteForm ({addNote, handleLogout}) {
 
     const noteObject = {
       content: newNote,
-      important: Math.random() > 0.5
+      important: false
     }
 
     addNote(noteObject)
@@ -23,7 +23,7 @@ export default function NoteForm ({addNote, handleLogout}) {
   }
 
   return (
-    <Togglable ref={togglableRef}>
+    <Togglable buttonLabel='Show Create Note' ref={togglableRef}>
       <h3>Create a new note</h3>
 
       <form onSubmit={handleSubmit}>
